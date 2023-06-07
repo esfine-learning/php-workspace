@@ -1,6 +1,11 @@
 // See https://aka.ms/vscode-remote/devcontainer.json for format details.
 {
     "name": "codespaces-laravel",
+    "features": {
+        "docker-from-docker": {
+            "version": "latest"
+        }
+    },
     "dockerComposeFile": ["docker-compose.yml"],
     "workspaceFolder": "/workspace",
     "service": "app",
