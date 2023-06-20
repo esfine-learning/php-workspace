@@ -23,3 +23,15 @@ services:
         MYSQL_DATABASE: laravel
         MYSQL_USER: laravel
         MYSQL_PASSWORD: laravel
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      PMA_HOST: 'db'
+      PMA_USER: 'root'
+      PMA_PASSWORD: 'root'
+    ports:
+      - 8888:80
