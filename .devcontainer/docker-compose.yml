@@ -32,6 +32,6 @@ services:
     environment:
       PMA_HOST: 'db'
       PMA_USER: 'root'
-      PMA_PASSWORD: 'root'
+      PMA_PASSWORD: 'laravel'
     ports:
       - 8888:80
