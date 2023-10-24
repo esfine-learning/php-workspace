@@ -1,6 +1,6 @@
 // See https://aka.ms/vscode-remote/devcontainer.json for format details.
 {
-    "name": "codespaces-laravel",
+    "name": "esfine-codespaces-php-template",
     "features": {
         "docker-from-docker": {
             "version": "latest"
@@ -29,13 +29,19 @@
     },
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [80],
+    "forwardPorts": [
+        80,
+        8888
+    ],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "",
-	"portsAttributes": {
-		"80": {
-			"label": "HTTP"
-		}
-	}
+"postCreateCommand": "",
+    "portsAttributes": {
+        "80": {
+            "label": "HTTP"
+        },
+        "8888": {
+            "label": "phpMyAdmin"
+        }
+    }
 }

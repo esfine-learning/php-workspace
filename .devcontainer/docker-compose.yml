@@ -8,19 +8,18 @@ services:
       - 80:80
     tty: true
     environment:
-        APP_ENV: local
-        PHP_EXTENSION_XDEBUG: 1
-        APACHE_DOCUMENT_ROOT: /workspace/public
+      APP_ENV: local
+      APACHE_DOCUMENT_ROOT: /workspace/public
   db:
     image: mysql:8
     restart: unless-stopped
     ports:
-        - 3306:3306
+      - 3306:3306
     environment:
-        MYSQL_ROOT_PASSWORD: laravel
-        MYSQL_DATABASE: laravel
-        MYSQL_USER: laravel
-        MYSQL_PASSWORD: laravel
+      MYSQL_ROOT_PASSWORD: laravel
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     depends_on:
@@ -33,3 +32,4 @@ services:
       PMA_PASSWORD: 'laravel'
     ports:
       - 8888:80
+
