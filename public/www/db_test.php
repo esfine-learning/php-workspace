@@ -28,7 +28,6 @@ $sql = 'SHOW TABLES';
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 
-//データベースの値を取得
 $result = $stmt->fetchall();
 
 var_dump($result);
